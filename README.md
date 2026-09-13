@@ -4,15 +4,15 @@ A pair of printed brackets that carry a **FarDriver ND72450** controller under t
 **Ride1Up REVV1 FS**, bolting to the frame's existing rail lugs. No frame modification, no drilling,
 no welding.
 
-**This design is printed and in service** — the bike moves under its own power on these brackets.
+**Printed and in service.**
 
 <p align="center">
   <img src="renders/assembly.png" width="88%" alt="Isometric render of the pair of brackets spanning both frame rails, with the FarDriver controller slung beneath, showing the ribbed shelves and louvred vertical panels">
 </p>
 
-The controller does **not** hang off one rail. It sits centred across the bike, spanning both, bolted
-to both brackets. The load is shared and carried mostly in **shear** rather than as a moment trying
-to rotate a single cantilevered bracket — which is the whole reason this design is two parts.
+The controller sits centred across the bike, spanning both rails and bolted to both brackets. Each
+bracket carries roughly half the weight close in to its own rail, and the load is carried mostly in
+**shear** rather than as a moment.
 
 ---
 
@@ -55,12 +55,11 @@ on your own frame.
 openscad -o stl/gauge.stl -D 'part="gauge"' src/fardriver-underseat-mount.scad
 ```
 
-⭐ **That 187 was 186 until a printed part said otherwise.** A tape read off a tick scale gave 186, and
-a spine printed at 186 only just went on over both lugs. A plate with two 5.5 mm holes swallows about
-half a millimetre of spacing error before it binds, so "barely fits" is real evidence the true figure
-is nearer 187. **A fit test on a printed plate beats a read off a scale**, and 187 is now the
-canonical number. If 187 still feels tight on your frame, open **one** hole with a 6 mm drill rather
-than reprint — but only one, or the fore/aft datum starts to float.
+The gauge should slide over both lugs without force. If it feels tight on your frame, open **one**
+hole with a 6 mm drill rather than reprinting — but only one, or the fore/aft datum starts to float.
+
+⚠️ Lug spacing is measured on one frame. Frame dimensions vary between production runs, so confirm it
+on yours before printing a 215 mm part.
 
 ---
 
@@ -68,8 +67,8 @@ than reprint — but only one, or the fore/aft datum starts to float.
 
 | | |
 |---|---|
-| **[docs/geometry.md](docs/geometry.md)** | The frame rails, the controller's hole pattern, and every canonical number with its provenance |
-| **[docs/design-notes.md](docs/design-notes.md)** | Why it is shaped this way — including three mistakes that are baked into the design as corrections |
+| **[docs/geometry.md](docs/geometry.md)** | Frame rails, controller hole pattern, and every dimension the model uses |
+| **[docs/design-notes.md](docs/design-notes.md)** | The design constraints, and what each one protects |
 | **[docs/printing.md](docs/printing.md)** | Material, orientation, settings |
 | **[docs/assembly.md](docs/assembly.md)** | Hardware, limiters, bolt stacks, order, proof-loading |
 
@@ -107,9 +106,7 @@ not need them to print the mount, but they are there if you are adapting this to
 
 ## Adapting it to a different frame or controller
 
-The model is parametric and the comments are unusually dense — every number carries the reasoning and
-the field evidence behind it, because most of them were wrong at least once. The numbers you would
-change first:
+The model is parametric. The numbers you would change first:
 
 ```openscad
 lug_spacing   = 187;   // between your frame's rail lug centres
@@ -128,9 +125,8 @@ Get that backwards and the bracket is 60 mm too short in the wrong direction.
 
 ## Contributing
 
-Issues and pull requests welcome — especially **measurements from other REVV1 FS frames** (lug
-spacing varies between production runs more than you would hope) and **photos of it fitted**. See
-[CONTRIBUTING.md](CONTRIBUTING.md).
+Issues and pull requests welcome — especially **lug-spacing measurements from other REVV1 FS frames**
+and **photos of it fitted**. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Licence
 

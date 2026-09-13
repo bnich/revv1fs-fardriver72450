@@ -1,7 +1,7 @@
 # Geometry — frame, controller, and the printed bracket
 
-Every canonical number, with where it came from. Figures marked ⭐ were corrected by a physical fit
-test after a measurement said otherwise; those are the ones to trust.
+Every dimension the model uses. All figures are measured on one frame and one controller unless
+noted; confirm the frame-side numbers on your own bike before printing.
 
 ---
 
@@ -9,10 +9,10 @@ test after a measurement said otherwise; those are the ones to trust.
 
 | | mm | Provenance |
 |---|---|---|
-| Lug spacing | ⭐ **187** | Measured 186 off a tick scale; a spine printed at 186 only just went on. 187 is canonical — see [design-notes.md](design-notes.md) |
+| Lug spacing | **187** | ⚠️ confirm on your frame with the gauge before printing |
 | Lug outside diameter | **16** | measured (15.98) |
 | Frame bolt | **M5** | through a metal limiter |
-| Pad standoff | **6** | ⚠️ measured against **bare frame**, panels off |
+| Pad standoff | **6** | ⚠️ measured against **bare frame**, panels off — the side panel adds to this stack |
 | Pad diameter | **15** | sized to sit on the lug |
 | Side panel | **2** | sits between frame and pad; **adds** to the stack |
 | Lug face → bracket wall | **8** | = 6 + 2 |
@@ -39,10 +39,6 @@ tube, so the bracket stands off on a pad at each hole and touches the frame nowh
 the rails. So the pair of holes landing on any one bracket is the **106 mm** pair, not the 168 mm
 pair. Read `dx` as *along* the bike and `dy` as *across* it.
 
-The sketch these came from labels the overall sizes "12 mm × 18 mm". Read as **centimetres** —
-120 × 180 — which matches the ND72450 flat-plate spec. It cannot be millimetres: a 7 mm inset does
-not fit inside a 12 mm width, and no 12 × 18 mm plate carries a 2.15 kg controller.
-
 ---
 
 ## 3. The printed bracket, as it comes out
@@ -54,7 +50,7 @@ not fit inside a 12 mm width, and no 12 × 18 mm plate carries a 2.15 kg control
 | | mm | |
 |---|---|---|
 | Blank length | **215** | lug spacing + nose + tail |
-| Panel thickness | **10** | ⭐ was 4 mm when this was going to be aluminium. Plastic needs its section |
+| Panel thickness | **10** | plastic needs its section; this is not a sheet-metal bracket |
 | Drop below lug line | **35** | |
 | Margin above lugs | **20** | |
 | End margin | **14** | |

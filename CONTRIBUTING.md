@@ -2,9 +2,8 @@
 
 ## Most valuable contribution: measurements from another frame
 
-The gating number is the **187 mm** lug spacing, and it is measured on **one** REVV1 FS. Frame
-dimensions vary between production runs more than anyone would like. If you fit the gauge to your own
-bike, please report what you find — including "187 was fine", which is just as useful.
+The **187 mm** lug spacing is measured on one REVV1 FS. Frame dimensions vary between production
+runs. If you fit the gauge to your own bike, please report the result — including "187 was fine".
 
 Also wanted:
 
@@ -15,8 +14,7 @@ Also wanted:
 ## Changing the model
 
 `src/fardriver-underseat-mount.scad` is one heavily-commented file. The house style is that **every
-number carries its reasoning and its field evidence**, because most of these numbers were wrong at
-least once and the comment is what stops them being re-broken. Please match that.
+number states what it protects**, so it cannot be silently re-broken. Please match that.
 
 Before opening a PR:
 

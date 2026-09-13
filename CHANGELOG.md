@@ -3,12 +3,10 @@
 ## Unreleased
 
 ### Added
-- First public release of a design that is **already printed and in service** — the bike runs on
-  these brackets.
+- First public release. Printed and in service.
 - `bracket_left`, `bracket_right`, `brackets_plate` and the `gauge`, plus the measuring jigs and rig
   used to derive the frame geometry.
-- Documentation: geometry with provenance, design notes covering the corrections baked into the
-  shape, printing and assembly.
+- Documentation: geometry, design constraints, printing and assembly.
 
 ### Known
 - The `part` selector falls through to `bracket()` for an unrecognised name, so a typo silently
