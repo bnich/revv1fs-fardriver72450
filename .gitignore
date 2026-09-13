@@ -1,0 +1,8 @@
+*.csg
+*.ast
+*.term
+*.deps
+*~
+/scratch/
+.DS_Store
+Thumbs.db
